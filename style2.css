@@ -60,6 +60,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    padding-top: 76px;
 }
 
 .hero::before {
@@ -68,7 +69,6 @@ body {
     inset: 0;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Ccircle cx='200' cy='200' r='100' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='800' cy='300' r='150' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='600' cy='700' r='120' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");
 
-    /* 讓動畫更穩、更明顯 */
     animation: float 12s ease-in-out infinite;
     will-change: transform;
     transform: translate3d(0,0,0);
@@ -87,7 +87,7 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 /* ===============================
-   Profile Image（縮小＋圓形＋白框＋雙層金屬金框）
+   Profile Image
    =============================== */
 .profile-img {
     width: clamp(250px, 33vw, 340px);
@@ -107,10 +107,8 @@ body {
     aspect-ratio: 1 / 1;
     object-fit: cover;
 
-    /* 白色內框 */
     border: 5px solid #ffffff;
 
-    /* 雙層金屬感金框（亮金 + 深金） */
     box-shadow:
         0 0 0 3px #e6c45f,
         0 0 0 6px #bfa046,
@@ -127,7 +125,6 @@ body {
         0 18px 40px rgba(0,0,0,0.35);
 }
 
-/* 強制首頁 Hero 區不被覆蓋 */
 .hero .profile-img {
     border-radius: 50% !important;
 }
